@@ -19,12 +19,36 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         request_type = data.decode().split("\r\n")[0].split(" ")[0]
         request_path = data.decode().split("\r\n")[0].split(" ")[1]
 
+        # All the HTML + CSS + JS
         if (request_type == "GET" and request_path == "/"):
             self.request.sendall(server_build.buildOKResponse("text/html; charset = utf-8", server_build.readFile("index.html")))
         elif (request_type == "GET" and request_path == "/style.css"):
             self.request.sendall(server_build.buildOKResponse("text/css", server_build.readFile("style.css")))
         elif (request_type == "GET" and request_path == "/functions.js"):
             self.request.sendall(server_build.buildOKResponse("text/javascript", server_build.readFile("functions.js")))
+
+        elif (request_type == "GET" and request_path == "/index.html"):
+            self.request.sendall(server_build.buildOKResponse("text/html; charset = utf-8", server_build.readFile("index.html")))
+
+        elif (request_type == "GET" and request_path == "/users_index.html"):
+            self.request.sendall(server_build.buildOKResponse("text/html; charset = utf-8", server_build.readFile("users_index.html")))
+        elif (request_type == "GET" and request_path == "/users_style.css"):
+            self.request.sendall(server_build.buildOKResponse("text/css", server_build.readFile("users_style.css")))
+
+        elif (request_type == "GET" and request_path == "/chatroom_index.html"):
+            self.request.sendall(server_build.buildOKResponse("text/html; charset = utf-8", server_build.readFile("chatroom_index.html")))
+        elif (request_type == "GET" and request_path == "/chatroom_style.css"):
+            self.request.sendall(server_build.buildOKResponse("text/css", server_build.readFile("chatroom_style.css")))
+
+        elif (request_type == "GET" and request_path == "/ttt_index.html"):
+            self.request.sendall(server_build.buildOKResponse("text/html; charset = utf-8", server_build.readFile("ttt_index.html")))
+        elif (request_type == "GET" and request_path == "/ttt_style.css"):
+            self.request.sendall(server_build.buildOKResponse("text/css", server_build.readFile("ttt_style.css")))
+
+        elif (request_type == "GET" and request_path == "/images/test.png"):
+            self.request.sendall(server_build.buildOKResponse("image/png", server_build.readFile("images/test.png")))
+
+        # Invalid address
         else:
             self.request.sendall(server_build.buildNoResponse("text/plain; charset = utf-8", "Beep Boop, nothing here!"))
 
