@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>HEFT Homepage</title>
+    <link rel="stylesheet" type="text/css" href="login.css"/>
+</head>
+<body>
+
+    <div id = "webpage_name">
+        <header style="font-size: 300%;">H.E.F.T.</header>
+        <header>Happy Exciting Fun Time</header>
+    </div>
+
+    <div id = "login">
+        <a href = "login.html">Login</a>
+    </div>
+    
+    <ul id = "nav_bar"> 
+        <li id = "nav"><a href = "index.html">HOME</a></li>
+        <li id = "nav"><a href = "users_index.html">USERS</a></li>
+        <li id = "nav"><a href = "chatroom_index.html">CHATROOM</a></li>
+        <li id = "nav"><a href = "settings_index.html">SETTINGS</a></li>
+    </ul>
+
+    <div id = "login_box">
+        <b><u><header id = "info" style = "text-align: center;font-size: 150%;">Login</header></u></b> <br>
+        <div id = "login_form">
+            <form action="/login" method="post" enctype="multipart/form-data">
+                <label>Username: </label>
+                <input type="text" id = "form_input" name="username"><br/>
+                <label>Password:&nbsp </label>
+                <input type="text" id = "form_input" name="password"><br><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+<script src="functions.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>HEFT Homepage</title>
+    <link rel="stylesheet" type="text/css" href="settings_style.css"/>
+</head>
+<body>
+
+    <div id = "webpage_name">
+        <header style="font-size: 300%;">H.E.F.T.</header>
+        <header>Happy Exciting Fun Time</header>
+    </div>
+
+    <div id = "login">
+        Login
+    </div>
+    
+    <ul id = "nav_bar"> 
+        <li id = "nav"><a href = "index.html" id = "nav1">HOME</a></li>
+        <li id = "nav"><a href = "users_index.html" id = "nav1">USERS</a></li>
+        <li id = "nav"><a href = "chatroom_index.html" id = "nav1">CHATROOM</a></li>
+        <li id = "nav">SETTINGS</li>
+    </ul>
+
+    <div id = "setting_menu">
+        <b><u><header id = "info" style = "text-align: center;font-size: 150%;">Settings</header></u></b> <br>
+        <div id = "setting_1">
+            -=- Change the theme of the website -=- <br>
+            Color:
+            <button onclick = getColors() id = "color_button">Colors</button>
+            <div id = "colors">
+                    <button onclick = updateColor1() id = "color">Green</button>
+                    <button onclick = updateColor2() id = "color">Blue</button>
+                    <button onclick = updateColor3() id = "color">Red</button>
+                    <button onclick = updateColor4() id = "color">Yellow</button>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+        <button onclick = updateColor() id = "update_button">Update</button>
+        <div id = "message"></div>
+        <br>
+        <div id = "setting_2">
+            -=- Change your profile picture -=- 
+            <div id = picture_form>
+                <form action="/profile_upload" method="post" enctype="multipart/form-data">
+                    <label>Image: </label>
+                    <input type="file" name="upload">
+                    <br><br>
+                    <input type="submit" value="Submit">
+                 </form>
+            </div>
+        </div>
+    </div>
+
+<script src="settings.js"></script>
+</body>
+</html>
