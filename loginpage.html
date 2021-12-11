@@ -1,0 +1,32 @@
+<html>
+    <body>
+<h2>Sign Up</h2>
+<p>Password must include:</p>
+<ul>
+    <li>A minimum length of 8</li>
+    <li>A maximum length of 20</li>
+    <li>At least 1 lowercase character</li>
+    <li>At least 1 uppercase character</li>
+    <li>At least 1 number</li>
+    <li>At least 1 special character</li>    
+</ul>
+<form action="/signup" id="signup-form" method="post" enctype="multipart/form-data">
+    <input value="{{token}}" name="xsrf_token" hidden>
+    <label for="signup-username">Username: </label>
+    <input id="signup-username" type="text" name="username"><br/>
+    <label for="signup-password">Password: </label>
+    <input id="signup-password" type="text" name="password">
+    <input type="submit" value="Submit">
+ </form>
+
+ <h2>Sign In</h2>
+ <form action="/login" id="login-form" method="post" enctype="multipart/form-data">
+    <input value="{{token}}" name="xsrf_token" hidden>
+    <label for="login-username">Username: </label>
+    <input id="login-username" type="text" name="username"><br/>
+    <label for="login-password">Password: </label>
+    <input id="login-password" type="text" name="password">
+    <input type="submit" value="Submit">
+ </form>
+ </body>
+ </html>

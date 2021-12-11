@@ -11,30 +11,39 @@
     </div>
 
     <div id = "login">
-        <a href = "login.html">Login</a>
+        <a href = "loginpage.html">Login/Signup</a></li>
+    </div>
+    <div id = "hello">
+        {{greeting}}
     </div>
     
+
     <ul id = "nav_bar"> 
-        <li id = "nav">HOME</li>
-        <li id = "nav"><a href = "users_index.html">USERS</a></li>
+        <!--settings-->
+        
     </ul>
+    
 
     <div id = "online_users">
         <p style="font-size: 120%;"><u><b>Online Users</b></u></p>
         <!-- users here -->
-        <header id = "user">user123</header>
-        <header id = "user">user123</header>
-        <header id = "user">user123</header>
+        {{users}}
     </div>
 
-    <div id = "updates">
-        <b><u><header id = "info" style = "text-align: center;font-size: 150%;">Welcome to Our Page</header></u></b>
-        <b><u><header id = "info">Update 0.0</header></u></b>
-        <ul>
-            <li>Website was created.</li>
-            <li>Website was styled.</li>
-            <li>Webpage server created.</li>
-        </ul>
+    <div id = "chat">
+        <b><u><header id = "info" style = "text-align: center;font-size: 150%;">Chatroom</header></u></b>
+        <div id = "chatbox">
+            {{No messages yet...}}
+        </div>
+        
+        <div id = "chat_form">
+            <form action="/chat" id="chat-form" method="post" enctype="multipart/form-data">
+                <input value="{{token}}" name="xsrf_token" hidden>
+                <label for="form-message">Message: </label>
+                <input id="form-message" type="text" name="message">
+                <input type="submit" value="Enter">
+            </form>
+        </div>
     </div>
 
 <script src="functions.js"></script>

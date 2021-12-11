@@ -5,9 +5,11 @@ body {
 
 img {
     width: 120px;
+    height: 120px;
 }
 
 a:link {
+    color: #1c3d21;
     text-decoration: none;
 }
 
@@ -16,7 +18,7 @@ a:hover {
 }
 
 a:visited {
-    color: inherit;
+    color: #1c3d21;
     text-decoration: none;
 }
 
@@ -46,9 +48,15 @@ a:visited {
 #nav {
     margin: 0;
     padding: 1%;
+    background-color: #6f8f73;
     display: inline;
     font-size: 150%;
     text-align: center;
+    color: #1c3d21;
+}
+
+#nav:hover {
+    background-color: #536955;
 }
 
 #online_users{
@@ -61,8 +69,6 @@ a:visited {
     border-width: thick;
     border-color: #115924;
     background-color: #6f8f73;
-    overflow: scroll;
-    overflow-x: hidden;
 }
 
 #user {
@@ -79,8 +85,6 @@ a:visited {
     border-width: thick;
     border-color: #115924;
     background-color: #6f8f73;
-    overflow: scroll;
-    overflow-x: hidden;
 }
 
 #user_images{
